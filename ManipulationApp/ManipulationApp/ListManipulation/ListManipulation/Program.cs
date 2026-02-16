@@ -43,8 +43,14 @@ namespace ListManipulation
                 //devA
 
                 case "delete":
+                    Console.Write("Element: ");
+                    int element = int.Parse(Console.ReadLine());
+                    nums.Remove(element);
                     break;
                 case "remove":
+                    Console.Write("Index: ");
+                    int index = int.Parse(Console.ReadLine());
+                    nums.RemoveAt(index);
                     break;
                 //devB
 
