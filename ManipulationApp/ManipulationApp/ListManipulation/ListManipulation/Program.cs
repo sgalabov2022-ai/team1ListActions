@@ -23,10 +23,14 @@ namespace ListManipulation
                     break;
                 case "remove":
                     break;
+
                 case "print":
+                    Console.WriteLine(string.Join(", ", nums));
                     break;
-                case "countOdds": 
+                case "countOdds":
+                    Console.WriteLine(nums.Count());
                     break;
+
                 default:
                     break;
             }
