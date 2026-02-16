@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 
 namespace ListManipulation
 {
@@ -14,19 +15,45 @@ namespace ListManipulation
             switch (cmd[0])
             {
                 case "add":
+                    Console.Write("Num1: ");
+                    int addNum1 = int.Parse(Console.ReadLine());
+                    Console.Write("Num2: ");
+                    int addNum2 = int.Parse(Console.ReadLine());
+                    nums.Add(addNum1 + addNum2);    
                     break;
                 case "ins":
+                    Console.Write("Enter num: ");
+                    int insNum = int.Parse(Console.ReadLine());
+                    Console.Write("Enter index: ");
+                    int insIndex = int.Parse(Console.ReadLine());
+                    nums.Insert(insNum, insIndex);
                     break;
-                case "contains":                    
-                    break;
+                case "contains":
+                    Console.Write("Element: ");
+                    int contains = int.Parse(Console.ReadLine());
+                    if (nums.Contains(contains))
+                    {
+                        Console.WriteLine("Yes");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No");
+                    }
+                        break;
+                //devA
+
                 case "delete":
                     break;
                 case "remove":
                     break;
+                //devB
+
                 case "print":
                     break;
                 case "countOdds": 
                     break;
+                //devC
+
                 default:
                     break;
             }
